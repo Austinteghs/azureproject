@@ -1,0 +1,9 @@
+{
+	"name": "dftazureproject",
+	"location": "southafricanorth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c0d4edaf-5d4f-4f01-837d-fe0f2ba54122",
+		"tenantId": "272d6c3f-c8c5-40bb-af41-b88d03bc5c4b"
+	}
+}
