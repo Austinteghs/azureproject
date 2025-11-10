@@ -171,19 +171,19 @@
 						}
 					},
 					"sink": {
-						"type": "ParquetSink",
+						"type": "JsonSink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
 						},
 						"formatSettings": {
-							"type": "ParquetWriteSettings"
+							"type": "JsonWriteSettings"
 						}
 					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "Json_dynamic",
+						"referenceName": "Json_dynamic_new",
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "bronze",
@@ -194,7 +194,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "parquet_dynamic",
+						"referenceName": "Json_dynamic_new",
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "bronze",
