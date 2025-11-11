@@ -261,7 +261,7 @@
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
-													"folder": "cdc",
+													"folder": "@{item().table}_cdc",
 													"file": "empty.json"
 												}
 											}
@@ -336,7 +336,7 @@
 					{
 						"schema": "dbo",
 						"table": "DimDate",
-						"cdc_col": "date",
+						"cdc_col": "updated_at",
 						"from_date": ""
 					},
 					{
@@ -348,7 +348,7 @@
 					{
 						"schema": "dbo",
 						"table": "FactStream",
-						"cdc_col": "stream_timestamp",
+						"cdc_col": "updated_at",
 						"from_date": ""
 					}
 				]
