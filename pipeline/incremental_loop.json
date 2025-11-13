@@ -302,7 +302,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "SELECT MAX(@{item().cdc_col}) as cdc FROM @{item().schema}.@{item().table}",
+														"value": "@concat(\n       'SELECT ',\n       if(\n           empty(item().cdc_col),\n           '''N/A'' as cdc',\n           concat('MAX(', item().cdc_col, ') as cdc')\n       ),\n       ' FROM ',\n       item().schema,\n       '.',\n       item().table\n   )",
 														"type": "Expression"
 													}
 												}
@@ -324,7 +324,6 @@
 						"activity": "ForEach1",
 						"dependencyConditions": [
 							"Failed",
-							"Skipped",
 							"Succeeded"
 						]
 					}
