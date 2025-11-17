@@ -21,7 +21,7 @@ Here's a visual representation of the Spotify Data Engineering project:
 |--------|--------------------------------|------------------|----------------|
 | Bronze | Raw, immutable source data      | ADLS Gen2         | JSON/Parquet   |
 | Silver | Cleaned, validated, enriched    | Delta Lake        | Delta Tables   |
-| Gold   | Business-level aggregates       | Delta Lake / SQL Warehouse | Fact & Dimension Tables |
+| Gold   | Business-level aggregates       | Delta Lake  | Fact & Dimension Tables |
 
 **Core Services:**  
 - Azure Data Lake Storage Gen2: Bronze layer storage  
